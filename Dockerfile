@@ -1,7 +1,7 @@
 FROM python:3.9-slim
 
 COPY entrypoint.sh /entrypoint.sh
-COPY generate_readme.py /generate_readme.py
+COPY build_code_reference.py /build_code_reference.py
 
 RUN chmod +x /entrypoint.sh
 
