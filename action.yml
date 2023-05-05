@@ -1,0 +1,18 @@
+# action.yml
+name: 'create readme from include src'
+description: 'Provided a readem-src file with includes statements create a new readme'
+inputs:
+  src-file: 
+    description: 'path to the source file containting the include statements'
+    required: true
+    default: 'README-src.md'
+  out-file: 
+    desctiption: 'path to the generated file'
+    required: true
+    default: 'README.md'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.src-file }}
+    - ${{ inputs.our-file }}
