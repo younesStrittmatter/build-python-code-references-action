@@ -15,7 +15,7 @@ output_file_path = sys.argv[2]
 script_dir_path = os.path.dirname(os.path.abspath(__file__))
 
 # Get the path to the root directory
-root_dir_path = os.path.abspath(os.path.join(script_dir_path, os.pardir))
+root_dir_path = sys.argv[3]
 
 # Get the absolute path to the input file
 # input_file_abs_path = os.path.join(root_dir_path, input_file_path)
